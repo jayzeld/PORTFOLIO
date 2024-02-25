@@ -1,0 +1,839 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PORTFOLIO</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PORTFOLIO.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        text {
+            font-family: Horizon ;
+            text-align: left;
+            font-size: 30px;
+
+        }
+                textsec3 {
+            font-family: Horizon ;
+            font-size: 40px;
+
+        }
+
+          textsec.2 {
+            font-family: Horizon ;
+            font-size: 20px;
+
+        }
+
+        h1 {
+            font-family: 'Y2K Brutalism';
+            text-align: center;
+            font-size: 50px;
+        }
+
+        h5 {
+            font-family: 'Y2K Brutalism';
+            text-align: center;
+            font-size: 25px;
+        }
+
+        big1 {
+            text-align: left;
+            font-size: 60px;
+            line-height: 0.9;
+            font-family: 'Y2K Brutalism';
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 150px;
+            padding-bottom: 0px;
+        }
+
+        s_text4 {
+            
+            font-size: 50px;
+            line-height: 0.9;
+            font-family: 'Y2K Brutalism';
+
+        }
+               s_text6 {
+            
+            font-size: 50px;
+            line-height: 0.9;
+            font-family: 'Y2K Brutalism';
+
+        }
+
+
+        s_text5 {
+            font-size: 30px;
+            line-height: 0.9;
+            font-family: 'Y2K Brutalism';
+        }
+
+        big2 {
+            text-align: left;
+            line-height: 0.9;
+            font-size: 140px;
+            font-family: 'Y2K Brutalism';
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 100px;
+            padding-bottom: 0px;
+        }
+    </style>
+    <style>
+        #section1 {
+            background-image: url(images/section1.png);
+            background-color: black;
+            height: 750px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <style>
+
+        #section2 {
+            height: 800px;
+            background-color: blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url(images/section2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+            #section2 .left-align {
+                text-align: left;
+            }
+
+            #section2 .center-align {
+                text-align: center;
+            }
+
+        #section3 {
+            height: 800px;
+            background-color: black;
+   ;
+
+
+
+        }
+
+        #section4 {
+            height: 800px;
+            background-color: blue;
+        }
+
+        #section5 {
+            height: 1600px;
+            background-color: black;
+            text-align: center;
+        }
+
+                #section6 {
+            height: 800px;
+            background-color: #39FF14;
+            text-align: center;
+        }
+
+
+    </style>
+
+    <style>
+
+        .center {
+            padding: 300px 0;
+            text-align: center;
+        }
+    </style>
+
+
+    <style>
+
+        .center2 {
+            padding-top: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            padding-left: 50px;
+            text-align: center;
+
+        }
+    </style>
+    <style>
+        .pad{
+        padding-top: 0px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 150px;
+        }
+    </style>
+
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            max-width: 600px; 
+            overflow: hidden;
+
+        }
+
+        .slideshow-container {
+            flex: 1; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .square-image {
+            width: 300px;
+            height: 300px;
+            display: block;
+            aspect-ratio: 1/1;
+            margin-left: auto;
+            margin-right: auto;
+            border: 10px solid #39FF14;
+        }
+
+      
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            padding: 16px;
+            color: #39FF14;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+    </style>
+
+
+
+    <style>
+        .sec4text{
+            padding-top: 150px;
+            text-align: center;
+            line-height: 0.9;
+            font-size: 50px;
+            font-family: 'Y2K Brutalism';
+
+        }
+    </style>
+
+    <style>
+        .sec5text {
+            padding-top: 100px;
+            text-align: center;
+            line-height: 0.9;
+            font-size: 50px;
+            font-family: 'Y2K Brutalism';
+        }
+        </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        .image {
+            display: block;
+            width: 15%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); 
+            color: #f1f1f1;
+            width: 410%;
+            transition: .5s ease;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            font-family: Horizon;
+            font-size: 10px;
+            
+        }
+
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 30%;
+            padding-top: 100px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: black;
+                padding: 20px;
+                font-family: Arial;
+            }
+
+            .main-container {
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            .main-header {
+                font-size: 50px;
+                word-break: break-all;
+            }
+
+            .row-container {
+                margin: 10px -16px;
+            }
+
+                .row-container,
+                .row-container > .column-item {
+                    padding: 5px;
+                }
+
+            .column-item {
+                float: left;
+                width: 33.33%;
+                display: none;
+            }
+
+            .row-container:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+          
+            .content-box {
+                padding: 10px;
+            }
+
+         
+            .show-item {
+                display: block;
+            }
+
+          
+            .filter-btn-container {
+                text-align: center;
+                padding-top: 50px;
+
+            }
+
+            .filter-btn {
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                background-color: blue;
+                cursor: pointer;
+                font-family: Horizon;
+            }
+
+                .filter-btn.active {
+                    background-color: black;
+                    color: white;
+                    font-family: Horizon;
+                }
+        </style>
+
+
+        <style>
+    .custom-body {
+        font-family: Horizon;
+
+
+    }
+
+    .custom-sidebar {
+        height: 100%;
+        width: 1430px;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: #39FF14;
+        padding-top: 10px;
+    }
+
+    .custom-sidebar a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+
+    .custom-sidebar a:hover {
+        background-color: white;
+    }
+
+    .custom-content {
+        margin-left: 250px;
+        padding: 20px;
+    }
+
+    @@media screen and (max-width: 768px)
+    {
+        .custom-sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+
+        .custom-sidebar a {
+            text-align: center;
+        }
+
+        .custom-content {
+            margin-left: 0;
+        }
+
+            .custom-content > div {
+        display: none;
+    }
+    }
+
+</style>
+</head>
+
+<body>
+
+<div>
+    <div class="center" id="section1">
+
+        <h5><font color="#39FF14"> Welcome to</font></h5>
+        <h1><font color="#0000FF"> JD's Realm</font></h1>
+    </div>
+
+
+    <div class ="left-align" id="section2">
+    
+            <div class="pad">
+                <img src="images/jyzl.jpg" width="550" height="550"><br>
+            <big1><font color="39FF14">ABOUT<br></font></big1>
+            <big2><font color="39FF14">ME<br></font></big2>
+            </div>
+    </div>
+
+   
+
+    <div id="section3">
+            
+            <div class="custom-body">
+            <div class="custom-sidebar">
+                <a href="#home">Who am I?</a>
+                <a href="#background">Background</a>
+                <a href="#characteristics">Characteristics</a>
+                <a href="#goals">Goals</a>
+            </div>
+
+            <div class="custom-content">
+                <div id="home">
+                    <textsec3><font color="#39FF14">Who am I?<br /></font></textsec3>
+                    <textsec3.2><font color="blue">I am Jayzel Dimarucut, <br />
+                        a third-year Computer Engineering <br />
+                        student in Angeles University Foundation.</font></textsec3.2>
+                </div>
+
+                <div id="background">
+                    <<textsec3><font color="#39FF14">Background:<br /></font></textsec3>
+                    <textsec3.2><font color="blue"><li>I was born on June 4, 2003</li></textsec3.2>
+                    <textsec3.2><li>I live at Margot, Angeles City</li></textsec3.2>
+                    <textsec3.2><li>Among my two siblings, I'm the eldest one</li></textsec3.2>
+                    <textsec3.2><li>I graduated Junior and Senior High School at Republic Central Colleges</li></textsec3.2>
+                    <textsec3.2><li>My favorite color is blue and neon green (as you can see)</li></font></textsec3.2>
+                </div>
+
+                <div id="characteristics">
+                    <textsec3><font color="#39FF14">My Characteristics:<br /></font></textsec3>
+                    <textsec3.2><font color="blue"><ul>
+                        <li>Adaptable</li>
+                        <li>Adventurous</li>
+                        <li>Genuine</li>
+                        <li>Hard-working</li>
+                        <li>Persistent</li>
+                    </font></textsec3.2></ul>
+                </div>
+
+                <div id="goals">
+                    <textsec3><font color="#39FF14">My Goal:<br /></font></textsec3>
+                     <textsec3.2><font color="blue">I want to achieve a few important things in life.<br />
+                                                    First, I want to finish my studies to build a strong <br />
+                                                    foundation. Then, I aim to help my family financially <br />
+                                                    and emotionally. I also dream of starting my own business.<br />
+                                                    Lastly, I hope to travel the world and experience different <br />
+                                                    cultures and adventures.</p>
+
+                                                     </font></textsec3.2>
+                </div>
+            </div>
+
+     </div>
+
+     </div>
+
+ 
+ 
+
+    <div id="section4">
+        <div class="sec4text"><font color="39FF14">The ones I love<br></font></div>
+        <div class="center2">
+           <div class="d-flex justify-content-evenly">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img class="square-image" src="images/fam1.jpg" alt="Slide 1">
+                </div>
+                <div class="mySlides">
+                    <img class="square-image" src="images/fam2.jpg" alt="Slide 2">
+                </div>
+                <div class="mySlides">
+                    <img class="square-image" src="images/fam3.jpg" alt="Slide 3">
+                </div>
+                <a class="prev" onclick="plusSlides(0, -1)">❮</a>
+                <a class="next" onclick="plusSlides(0, 1)">❯</a>
+                <br>
+                <s_text5><font color="39FF14">My Family</font></s_text5>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img class="square-image" src="images/gf1.jpg" alt="Slide 4">
+                </div>
+                <div class="mySlides">
+                    <img class="square-image" src="images/gf2.jpg" alt="Slide 5">
+                </div>
+                <div class="mySlides">
+                    <img class="square-image" src="images/gf3.jpg" alt="Slide 6">
+                </div>
+                <a class="prev" onclick="plusSlides(1, -1)">❮</a>
+                <a class="next" onclick="plusSlides(1, 1)">❯</a>
+                <br>
+                <s_text5><font color="39FF14">My GF</font></s_text5>
+
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img class="square-image" src="images/smores1.jpg" alt="Slide 7">
+                </div>
+                <div class="mySlides">
+                    <img class="square-image" src="images/smores2.jpg" alt="Slide 8">
+                </div>
+                <div class="mySlides">
+                    <img class="square-image" src="images/smores3.jpg" alt="Slide 9">
+                </div>
+                <a class="prev" onclick="plusSlides(2, -1)">❮</a>
+                <a class="next" onclick="plusSlides(2, 1)">❯</a>
+                <br>
+                <s_text5><font color="39FF14">My Cat</font></s_text5>
+
+             </div>
+            </div>
+
+
+    </div>
+    </div>
+
+
+    <div id="section5">
+        <div class="sec5text"><font color="#0000ff">The things I do</font></div>
+            <div class="main-container">
+                <div class="filter-btn-container" id="myBtnContainer">
+                  <button class="filter-btn active" onclick="filterSelection('all')"><font color="white">All</font color></button>
+                  <button class="filter-btn" onclick="filterSelection('cycling')"> <font color="white">Cycling</font color></</button>
+                  <button class="filter-btn" onclick="filterSelection('guitar')"><font color="white">Playing the Guitar</font color></</button>
+                  <button class="filter-btn" onclick="filterSelection('design')"><font color="white">Graphic Designing</font color></</button>
+                </div>
+            
+ 
+     <div class="row-container">  
+                   <div class="column-item cycling">
+           <div class="content-box">       
+
+                <img src="images/bike1.jpeg" width=100%>
+                </div>
+            </div>
+
+
+
+             <div class="column-item cycling">
+               <div class="content-box">
+
+                    <img src="images/bike6.jpg" width=100%>
+                    </div>
+                </div>
+
+             <div class="column-item cycling">
+               <div class="content-box">
+
+                    <img src="images/bike4.jpeg" width=100%>
+
+                </div>
+
+             </div>
+
+
+
+             <div class="column-item design">
+               <div class="content-box">
+
+                    <img src="images/design2.png" width=80%>
+	            </div>
+                </div>
+
+
+
+             <div class="column-item design">
+               <div class="content-box">
+
+                    <img src="images/design3.png" width=80%>
+
+                </div>
+
+             </div>
+
+             <div class="column-item design">
+               <div class="content-box">
+
+                    <img src="images/design4.png" width=80%>
+
+                </div>
+
+             </div>
+
+
+
+              <div class="column-item guitar">
+               <div class="content-box">
+
+                    <video width=80% controls>
+                      <source src="vids/vid1.mp4" type="video/mp4">
+                    </video>
+
+                    </div>
+                </div>
+
+              <div class="column-item guitar">
+               <div class="content-box">
+                    <video width=80% controls>
+                      <source src="vids/vid2.mp4" type="video/mp4">
+                    </video>
+
+                    </div>
+                </div>
+
+              <div class="column-item guitar">
+               <div class="content-box">
+                    <video width=80% controls>
+                      <source src="vids/vid3.mp4" type="video/mp4">
+                    </video>
+
+                    </div>
+                </div>
+
+
+           </div>
+         </div>
+
+
+
+    </div>
+
+    <div id="section6">
+
+        <s_text5>Contact me:</s_text5>
+
+
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <script>
+        let slideIndex = [1, 1, 1];
+
+        function plusSlides(slideshowIndex, n) {
+            showSlides(slideshowIndex, slideIndex[slideshowIndex] += n);
+        }
+
+        function showSlides(slideshowIndex, n) {
+            let i;
+            let slides = document.querySelectorAll(".slideshow-container")[slideshowIndex].getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex[slideshowIndex] = 1;
+            }
+            if (n < 1) {
+                slideIndex[slideshowIndex] = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex[slideshowIndex] - 1].style.display = "block";
+        }
+
+        showSlides(0, 1);
+        showSlides(1, 1);
+        showSlides(2, 1);
+    </script>
+
+            <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column-item");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            removeClass(x[i], "show-item");
+            if (x[i].className.indexOf(c) > -1) addClass(x[i], "show-item");
+          }
+        }
+
+        function addClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+
+        function removeClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+
+
+        
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+
+            <script>
+                    
+                    function showCustomContent(target) {
+                        
+                        var contentDivs = document.querySelectorAll('.custom-content > div');
+                        contentDivs.forEach(function(div) {
+                            div.style.display = 'none';
+                        });
+
+                        
+                        var targetDiv = document.getElementById(target);
+                        if (targetDiv) {
+                            targetDiv.style.display = 'block';
+                        }
+                    }
+
+                    
+                    var sidebarLinks = document.querySelectorAll('.custom-sidebar a');
+                    sidebarLinks.forEach(function(link) {
+                        link.addEventListener('click', function(event) {
+                            var target = this.getAttribute('href').substring(1);
+                            showCustomContent(target);
+                            event.preventDefault(); 
+                        });
+                    });
+
+                    
+                    var initialHash = window.location.hash.substring(1);
+                    if (initialHash) {
+                        showCustomContent(initialHash);
+                    } else {
+                        showCustomContent('home');
+                    }
+                </script>
+       
+
+
+
+
+        <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

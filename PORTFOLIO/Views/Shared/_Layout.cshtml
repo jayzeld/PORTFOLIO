@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PORTFOLIO.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         html {
@@ -28,7 +29,9 @@
 
           textsec.2 {
             font-family: Horizon ;
-            font-size: 20px;
+            font-size: 30px;
+            line-height: 10px;
+            
 
         }
 
@@ -88,6 +91,13 @@
             padding-bottom: 0px;
         }
     </style>
+
+    <style>
+        .border{
+            border: 2px solid black;
+        }
+
+    </style>
     <style>
         #section1 {
             background-image: url(images/section1.png);
@@ -121,30 +131,28 @@
             }
 
         #section3 {
-            height: 800px;
-            background-color: black;
-   ;
-
-
+            height: 350px;
+            background-color: white;
+            text-align:center;
+   
 
         }
 
         #section4 {
             height: 800px;
-            background-color: blue;
+            background-color: black;
         }
 
         #section5 {
-            height: 1600px;
-            background-color: black;
+            height: 1400px;
+            background-color: white;
             text-align: center;
+        
         }
 
         #section6 {
             height: 800px;
             background-color: #39FF14;
-            text-align: center;
-            padding: 100px;
         }
 
 
@@ -395,62 +403,91 @@
         </style>
 
 
+         <style>
+            * {box-sizing: border-box}
+
+            
+            body, html {
+              height: 100%;
+              margin: 0;
+              font-family: Horizon;
+            }
+
+            
+            .tablink {
+              background-color: white;
+              color: white;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              font-size: 17px;
+              width: 25%;
+               font-family: Horizon;
+
+  
+            }
+
+            .tablink:hover {
+              
+              font-family: Horizon;
+            }
+
+            
+            .tabcontent {
+              color: #39FF14;
+              display: none;
+              padding: 100px 20px;
+              height: 100%;
+            }
+
+            #Home {background-color: blue;}
+            #News {background-color: blue;}
+            #Contact {background-color: blue;}
+            #About {background-color: blue;}
+         </style>
+
         <style>
-    .custom-body {
-        font-family: Horizon;
+            .page-body {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: 0;
+            }
+
+            .icon-container-custom {
+              margin-bottom: 20px;
+            }
+
+            .icon-custom {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              padding: 20px;
+              font-size: 30px;
+              width: 50px; 
+              height: 50px; 
+              text-align: center;
+              text-decoration: none;
+              margin: 5px;
+              border-radius: 50%;
+              
+             
+            }
+
+            .icon-custom:hover {
+                opacity: 0.9;
+                color: black;
+            }
+
+            
+
+        </style>
 
 
-    }
-
-    .custom-sidebar {
-        height: 100%;
-        width: 1430px;
-        position: relative;
-        top: 0;
-        left: 0;
-        background-color: #39FF14;
-        padding-top: 10px;
-    }
-
-    .custom-sidebar a {
-        padding: 10px;
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-
-    .custom-sidebar a:hover {
-        background-color: white;
-    }
-
-    .custom-content {
-        margin-left: 250px;
-        padding: 20px;
-    }
-
-    @@media screen and (max-width: 768px)
-    {
-        .custom-sidebar {
-            width: 100%;
-            height: auto;
-            position: relative;
-        }
-
-
-        .custom-sidebar a {
-            text-align: center;
-        }
-
-        .custom-content {
-            margin-left: 0;
-        }
-
-            .custom-content > div {
-        display: none;
-    }
-    }
-
-</style>
 </head>
 
 <body>
@@ -475,59 +512,55 @@
    
 
     <div id="section3">
-            
-            <div class="custom-body">
-            <div class="custom-sidebar">
-                <a href="#home">Who am I?</a>
-                <a href="#background">Background</a>
-                <a href="#characteristics">Characteristics</a>
-                <a href="#goals">Goals</a>
+
+          <button class="tablink" onclick="openPage('Home', this, '#39FF14')"
+            id="defaultOpen"><font color="black">Who am I?</font></button>
+            <button class="tablink" onclick="openPage('News', this, '#39FF14 ')"><font color="black">Background</font></button>
+            <button class="tablink" onclick="openPage('Contact', this, '#39FF14')"><font color="black">Characteristics</font></button>
+            <button class="tablink" onclick="openPage('About', this, '#39FF14')"><font color="black">Goals</font></button>
+
+            <div id="Home" class="tabcontent">
+            <h1> Who Am I?<br></h1>
+              <textsec.2><font color="white">Well, I am Jayzel Dimarucut, a third-year<br>
+              Computer Engineering student in<br> Angeles University Foundation.</font></textsec.2>
+  
             </div>
 
-            <div class="custom-content">
-                <div id="home">
-                    <textsec3><font color="#39FF14">Who am I?<br /></font></textsec3>
-                    <textsec3.2><font color="blue">I am Jayzel Dimarucut, <br />
-                        a third-year Computer Engineering <br />
-                        student in Angeles University Foundation.</font></textsec3.2>
-                </div>
-
-                <div id="background">
-                    <<textsec3><font color="#39FF14">Background:<br /></font></textsec3>
-                    <textsec3.2><font color="blue"><li>I was born on June 4, 2003</li></textsec3.2>
-                    <textsec3.2><li>I live at Margot, Angeles City</li></textsec3.2>
-                    <textsec3.2><li>Among my two siblings, I'm the eldest one</li></textsec3.2>
-                    <textsec3.2><li>I graduated Junior and Senior High School at Republic Central Colleges</li></textsec3.2>
-                    <textsec3.2><li>My favorite color is blue and neon green (as you can see)</li></font></textsec3.2>
-                </div>
-
-                <div id="characteristics">
-                    <textsec3><font color="#39FF14">My Characteristics:<br /></font></textsec3>
-                    <textsec3.2><font color="blue"><ul>
-                        <li>Adaptable</li>
-                        <li>Adventurous</li>
-                        <li>Genuine</li>
-                        <li>Hard-working</li>
-                        <li>Persistent</li>
-                    </font></textsec3.2></ul>
-                </div>
-
-                <div id="goals">
-                    <textsec3><font color="#39FF14">My Goal:<br /></font></textsec3>
-                     <textsec3.2><font color="blue">I want to achieve a few important things in life.<br />
-                                                    First, I want to finish my studies to build a strong <br />
-                                                    foundation. Then, I aim to help my family financially <br />
-                                                    and emotionally. I also dream of starting my own business.<br />
-                                                    Lastly, I hope to travel the world and experience different <br />
-                                                    cultures and adventures.</p>
-
-                                                     </font></textsec3.2>
-                </div>
+            <div id="News" class="tabcontent">
+              <h1>Background:<br></h1>
+              <textsec.2><font color="white"><li>I was born on June 4, 2003</li></textsec.2>
+            <textsec.2><li>I live at Margot, Angeles City</li></textsec.2>
+            <textsec.2><li>Among my two siblings, I'm the eldest one</li></textsec.2>
+            <textsec.2><li>My favorite color is blue and neon green (as you can see)</li>
+            <textsec.2><li>I graduated Junior and Senior High School at Republic Central Colleges</li></textsec.2>
+            </font></textsec.2>
             </div>
 
-     </div>
+            <div id="Contact" class="tabcontent">
+              <h1>Characteristics:<br></h1>
+              <textsec.2><font color="white">
+                <li>Adaptable</li>
+                <li>Adventurous</li>
+                <li>Genuine</li>
+                <li>Hard-working</li>
+                <li>Persistent</li>
+            </font></textsec.2>
+            </div>
 
-     </div>
+            <div id="About" class="tabcontent">
+              <h1>Goals:<br></h1>
+
+             <textsec.2><font color="white">I want to achieve a few important things in life.<br />
+                                            First, I want to finish my studies to build a strong <br />
+                                            foundation. Then, I aim to help my family financially <br />
+                                            and emotionally. I also dream of starting my own business.<br />
+                                            Lastly, I hope to travel the world and experience different <br />
+                                            cultures and adventures.</p>
+
+                                             </font></textsec.2>
+            </div>              
+          
+    </div>
 
  
  
@@ -604,7 +637,7 @@
             
  
      <div class="row-container">  
-                   <div class="column-item cycling">
+          <div class="column-item cycling">
            <div class="content-box">       
 
                 <img src="images/bike1.jpeg" width=100%>
@@ -618,7 +651,7 @@
 
                     <img src="images/bike6.jpg" width=100%>
                     </div>
-                </div>
+              </div>
 
              <div class="column-item cycling">
                <div class="content-box">
@@ -634,7 +667,7 @@
              <div class="column-item design">
                <div class="content-box">
 
-                    <img src="images/design2.png" width=80%>
+                    <img class="border" src="images/design2.png" width=80%>
 	            </div>
                 </div>
 
@@ -643,7 +676,7 @@
              <div class="column-item design">
                <div class="content-box">
 
-                    <img src="images/design3.png" width=80%>
+                    <img class="border" src="images/design3.png" width=80%>
 
                 </div>
 
@@ -652,13 +685,14 @@
              <div class="column-item design">
                <div class="content-box">
 
-                    <img src="images/design4.png" width=80%>
+                    <img class="border" src="images/design4.png" width=80%>
 
                 </div>
 
              </div>
+     </div>
 
-
+        <div class="row-container">  
 
               <div class="column-item guitar">
                <div class="content-box">
@@ -688,24 +722,36 @@
                     </div>
                 </div>
 
-
            </div>
-         </div>
+           </div>
+     </div>
 
+     </div>
 
-
-    </div>
 
     <div id="section6">
+    
+        <div class="page-body">
+          <div>
+            <h1>Contact me:</h1>
+          </div>
 
-        <s_text5>Contact me:</s_text5>
-
-
+          <div class="icon-container-custom">
+            <a href="https://www.facebook.com/jayzeeeeel/" target="_blank" class="icon-custom icon-facebook-custom fa fa-facebook"></a>
+            <a href="https://twitter.com/jyzldmrct" target="_blank" class="icon-custom icon-twitter-custom fa fa-twitter"></a>
+            <a href="https://www.instagram.com/jyzldmrct/" target="_blank" class="icon-custom icon-instagram-custom fa fa-instagram"></a>
+            <a href="mailto:jayzeldimarucut03@gmail.com" class="icon-custom icon-google-custom fa fa-google"></a>
+          </div>
         </div>
+
         
     </div>
     </div>
     </div>
+    </div>
+    </div>
+    </div>
+    </<div>
     </div>
 
 
@@ -787,40 +833,23 @@
         }
         </script>
 
-            <script>
-                    
-                    function showCustomContent(target) {
-                        
-                        var contentDivs = document.querySelectorAll('.custom-content > div');
-                        contentDivs.forEach(function(div) {
-                            div.style.display = 'none';
-                        });
+         <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
 
-                        
-                        var targetDiv = document.getElementById(target);
-                        if (targetDiv) {
-                            targetDiv.style.display = 'block';
-                        }
-                    }
-
-                    
-                    var sidebarLinks = document.querySelectorAll('.custom-sidebar a');
-                    sidebarLinks.forEach(function(link) {
-                        link.addEventListener('click', function(event) {
-                            var target = this.getAttribute('href').substring(1);
-                            showCustomContent(target);
-                            event.preventDefault(); 
-                        });
-                    });
-
-                    
-                    var initialHash = window.location.hash.substring(1);
-                    if (initialHash) {
-                        showCustomContent(initialHash);
-                    } else {
-                        showCustomContent('home');
-                    }
-                </script>
+        document.getElementById("defaultOpen").click();
+        </script>
        
 
 
